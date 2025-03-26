@@ -44,8 +44,8 @@ public class Main {
     }
 
     public static void procesarNotasFuncional(List<Float> notas) {
-        System.out.println("El número de notas >= a 4.0 es: "+notas.stream().filter(nota -> nota >=4.0f).count());
         System.out.println("El número de notas < a 3.6 es: "+notas.stream().filter(nota -> nota < 3.6f).count());
+        System.out.println("El número de notas >= a 4.0 es: "+notas.stream().filter(nota -> nota >=4.0f).count());
         System.out.println("El número de notas entre [3.6 y 4.0) es: "+notas.stream().filter(nota -> nota >= 3.6f && nota <4.0f).count());
     }
     public static void procesarNotasImperativo(List<Float> notas) {
