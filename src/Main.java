@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         List<Float> notas = new ArrayList<Float>();
@@ -14,7 +13,7 @@ public class Main {
         //-------------------------------------------------------//
 
         llenarNotas(notas, MIN, MAX);
-
+        procesarNotasFuncional(notas);
     }
 
     public static void llenarNotas(List<Float> notas,int MIN, int MAX) {
@@ -44,6 +43,11 @@ public class Main {
 
     }
 
-    public static void procesarNotas() {}
-
+    public static void procesarNotasFuncional(List<Float> notas) {
+        System.out.println("El número de notas >= a 4.0 es: "+notas.stream().filter(nota -> nota >=4.0f).count());
+        System.out.println("El número de notas < a 3.6 es: "+notas.stream().filter(nota -> nota < 3.6f).count());
+        System.out.println("El número de notas >= a 4.0 es: "+notas.stream().filter(nota -> nota >= 3.6f && nota <4.0f).count());
+    }
+    public static void procesarNotasImperativo(List<Float> notas) {
+    }
 }
