@@ -49,5 +49,20 @@ public class Main {
         System.out.println("El número de notas entre [3.6 y 4.0) es: "+notas.stream().filter(nota -> nota >= 3.6f && nota <4.0f).count());
     }
     public static void procesarNotasImperativo(List<Float> notas) {
+        int notasMenorA36=0;
+        int notasMayorOIgualA4=0;
+        int notasEntre36y39=0;
+
+        for (Float nota : notas) {
+            if (nota < 3.6f)
+                notasMenorA36++;
+            if (nota >= 4.0f)
+                notasMayorOIgualA4++;
+            if (nota >= 3.6f && nota <4.0f)
+                notasEntre36y39++;
+        }
+        System.out.println("Notas menor a 3.6: "+notasMenorA36);
+        System.out.println("Notas mayor o igual a 4.0: "+notasMayorOIgualA4);
+        System.out.println("Notas entre [3.6-4.0): "+notasEntre36y39);
     }
 }
