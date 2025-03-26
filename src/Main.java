@@ -22,7 +22,7 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             notas.add((rand.nextInt(MIN,MAX)+1)/1000.0f);
         }
-
+        notas.sort(null);
 //        Esta parte del código es para confirmar que mi algoritmo puede crear resultados en el rango [1.0 - 7.0]
 //        int iterador = 0;
 //        while (true){
@@ -46,7 +46,7 @@ public class Main {
     public static void procesarNotasFuncional(List<Float> notas) {
         System.out.println("El número de notas >= a 4.0 es: "+notas.stream().filter(nota -> nota >=4.0f).count());
         System.out.println("El número de notas < a 3.6 es: "+notas.stream().filter(nota -> nota < 3.6f).count());
-        System.out.println("El número de notas >= a 4.0 es: "+notas.stream().filter(nota -> nota >= 3.6f && nota <4.0f).count());
+        System.out.println("El número de notas entre [3.6 y 4.0) es: "+notas.stream().filter(nota -> nota >= 3.6f && nota <4.0f).count());
     }
     public static void procesarNotasImperativo(List<Float> notas) {
     }
