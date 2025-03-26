@@ -40,7 +40,10 @@ public class Main {
 //
 //        }
 
-//        System.out.println(notas);
+        System.out.println("Las notas generadas son: \n"+notas);
 
     }
+
+    public static void procesarNotas() {}
+
 }
