@@ -14,6 +14,8 @@ public class Main {
 
         llenarNotas(notas, MIN, MAX);
         procesarNotasFuncional(notas);
+        System.out.println("Voy a procesar de manera imperativa:");
+        procesarNotasImperativo(notas);
     }
 
     public static void llenarNotas(List<Float> notas,int MIN, int MAX) {
