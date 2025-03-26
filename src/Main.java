@@ -7,9 +7,18 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         List<Float> notas = new ArrayList<Float>();
-        Random rand = new Random();
+
+        //Este es el rango inclusivo en el que se generarán notas//
         int MAX = 7000;
         int MIN = 1000;
+        //-------------------------------------------------------//
+
+        llenarNotas(notas, MIN, MAX);
+
+    }
+
+    public static void llenarNotas(List<Float> notas,int MIN, int MAX) {
+        Random rand = new Random();
 
         for (int i = 0; i < 10; i++) {
             notas.add((rand.nextInt(MIN,MAX)+1)/1000.0f);
@@ -31,6 +40,7 @@ public class Main {
 //
 //        }
 
-        System.out.println(notas);
+//        System.out.println(notas);
+
     }
 }
